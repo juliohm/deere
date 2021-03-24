@@ -326,29 +326,41 @@ git-tree-sha1 = "8aee6fa096b0cbdb05e71750c978b96a08c78951"
 uuid = "d2c73de3-f751-5644-a686-071e5b155ba9"
 version = "0.53.0+0"
 
+[[GeoClustering]]
+deps = ["Distances", "LinearAlgebra", "Meshes", "Statistics", "Tables"]
+git-tree-sha1 = "fbefedb233a5f63df2423582ee3b10d9762f4a12"
+uuid = "7472b188-6dde-460e-bd07-96c4bc049f7e"
+version = "0.1.0"
+
 [[GeoEstimation]]
 deps = ["Distances", "GeoStatsBase", "KrigingEstimators", "LinearAlgebra", "Meshes", "NearestNeighbors", "Variography"]
-git-tree-sha1 = "80ad938a48663f7c5ff4c79acf4a6307a5b8a69e"
+git-tree-sha1 = "fba67e21701a352f0f2f7c2b1664fe86da74e16d"
 uuid = "a4aa24f8-9f24-4d1a-b848-66d123bfa54d"
-version = "0.6.0"
+version = "0.6.1"
+
+[[GeoLearning]]
+deps = ["Distributions", "GeoStatsBase", "MLJModelInterface", "Meshes", "TableOperations", "Tables"]
+git-tree-sha1 = "80ef1a533b5dabab7847b6ce2562e67bcdfe0648"
+uuid = "90c4468e-a93e-43b4-8fb5-87d804bc629f"
+version = "0.1.0"
 
 [[GeoSimulation]]
 deps = ["CpuId", "Distributions", "FFTW", "GeoStatsBase", "KrigingEstimators", "LinearAlgebra", "Meshes", "Statistics", "Variography"]
-git-tree-sha1 = "f1f10f966d76d5579e105bb273adbd8241cd152b"
+git-tree-sha1 = "3d92d2317777f00077c80ed7af1b0bb756b7d36d"
 uuid = "220efe8a-9139-4e14-a4fa-f683d572f4c5"
-version = "0.3.0"
+version = "0.3.1"
 
 [[GeoStats]]
-deps = ["GeoEstimation", "GeoSimulation", "GeoStatsBase", "KrigingEstimators", "Meshes", "PointPatterns", "Reexport", "Variography"]
-git-tree-sha1 = "a9eace2583787d014f1b0c5307291e66e4fe9602"
+deps = ["GeoClustering", "GeoEstimation", "GeoLearning", "GeoSimulation", "GeoStatsBase", "KrigingEstimators", "Meshes", "PointPatterns", "Reexport", "Variography"]
+git-tree-sha1 = "05ed0080693395f1d1560ee9fe3e6dcacfac4a3a"
 uuid = "dcc97b0b-8ce5-5539-9008-bb190f959ef6"
-version = "0.23.0"
+version = "0.24.0"
 
 [[GeoStatsBase]]
 deps = ["AverageShiftedHistograms", "CSV", "CategoricalArrays", "Combinatorics", "DensityRatioEstimation", "Distances", "Distributed", "Distributions", "LinearAlgebra", "LossFunctions", "MLJModelInterface", "Meshes", "Optim", "Parameters", "RecipesBase", "ScientificTypes", "StaticArrays", "Statistics", "StatsBase", "Tables", "Transducers", "TypedTables"]
-git-tree-sha1 = "96a7467ffea6d625cfcd946d5809021ddaefdeb1"
+git-tree-sha1 = "de6a3f130ccaed98fc96a50d2414cd0ca0fcfdb2"
 uuid = "323cb8eb-fbf6-51c0-afd0-f8fba70507b2"
-version = "0.20.1"
+version = "0.21.0"
 
 [[GeometryBasics]]
 deps = ["EarCut_jll", "IterTools", "LinearAlgebra", "StaticArrays", "StructArrays", "Tables"]
@@ -439,9 +451,9 @@ version = "2.0.1+3"
 
 [[KrigingEstimators]]
 deps = ["Combinatorics", "GeoStatsBase", "LinearAlgebra", "Meshes", "Statistics", "Variography"]
-git-tree-sha1 = "f0be09284668de53ba59aaadf4e8b1713053644a"
+git-tree-sha1 = "a96429745f780f87aa0bfb58a588fa525db81a4c"
 uuid = "d293930c-a38c-56c5-8ebb-12008647b47a"
-version = "0.7.0"
+version = "0.7.1"
 
 [[LAME_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
@@ -749,9 +761,9 @@ version = "0.7.4"
 
 [[PointPatterns]]
 deps = ["Distributions", "GeoStatsBase", "Meshes"]
-git-tree-sha1 = "7c651e852c02336412dab114a1a30c73f9a1c1e6"
+git-tree-sha1 = "5f1521ec901ceaea91cc2d1e4be4d2171806f526"
 uuid = "e61b41b6-3414-4803-863f-2b69057479eb"
-version = "0.3.3"
+version = "0.3.4"
 
 [[PooledArrays]]
 deps = ["DataAPI", "Future"]
@@ -964,6 +976,12 @@ version = "0.2.0"
 deps = ["Dates"]
 uuid = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
 
+[[TableOperations]]
+deps = ["SentinelArrays", "Tables", "Test"]
+git-tree-sha1 = "a7cf690d0ac3f5b53dd09b5d613540b230233647"
+uuid = "ab02a1b2-a7df-11e8-156e-fb1833f50b87"
+version = "1.0.0"
+
 [[TableTraits]]
 deps = ["IteratorInterfaceExtensions"]
 git-tree-sha1 = "b1ad568ba658d8cbb3b892ed5380a6f3e781a81e"
@@ -1021,9 +1039,9 @@ version = "1.3.0"
 
 [[Variography]]
 deps = ["Distances", "GeoStatsBase", "InteractiveUtils", "LinearAlgebra", "Meshes", "NearestNeighbors", "Optim", "Parameters", "Printf", "RecipesBase", "Setfield", "SpecialFunctions", "Transducers"]
-git-tree-sha1 = "0c81d19fe12d3de60ae7d54654adf08c698d0191"
+git-tree-sha1 = "0145f9e3335540f84c170e20d4172cf2998036ec"
 uuid = "04a0146e-e6df-5636-8d7f-62fa9eb0b20c"
-version = "0.12.0"
+version = "0.12.2"
 
 [[Wayland_jll]]
 deps = ["Artifacts", "Expat_jll", "JLLWrappers", "Libdl", "Libffi_jll", "Pkg", "XML2_jll"]
